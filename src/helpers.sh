@@ -4,7 +4,7 @@
 
 usage() {
   cat << EOF
-giti
+giti.sh
 
 Usage:
   giti.sh [-h|--help] [-v|--version]
@@ -17,6 +17,9 @@ Options:
 
   -v|--version
           version
+
+  pl|pull
+          git pull
 
   up|upgrade
           upgrade giti.sh
@@ -46,16 +49,16 @@ get_args() {
     local key=$1
 
     case $key in
-      pl|pull)
-        pull_main "$@"
-        exit 0
-        ;;
       -h|--help)
         usage
         exit 0
         ;;
       -v|--version)
         printf '%s\n' "$VERSION"
+        exit 0
+        ;;
+      pl|pull)
+        pull_main "$@"
         exit 0
         ;;
       up|upgrade)

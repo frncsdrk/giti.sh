@@ -4,7 +4,7 @@
 
 pull_usage() {
   cat << EOF
-giti pull
+giti.sh pull
 
 Usage:
   giti.sh pl|pull [-h|--help]

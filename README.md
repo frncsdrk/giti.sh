@@ -7,7 +7,7 @@
 ## usage
 
 ```
-giti
+giti.sh
 
 Usage:
   giti.sh [-h|--help] [-v|--version]
@@ -21,15 +21,18 @@ Options:
   -v|--version
           version
 
+  pl|pull
+          git pull
+
   up|upgrade
           upgrade giti.sh
 
 Examples:
-  giti.sh -v
-          display version
-
   giti.sh -h
           display this message
+
+  giti.sh -v
+          display version
 
   giti.sh upgrade
           upgrade giti.sh to latest version
