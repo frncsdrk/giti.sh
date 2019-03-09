@@ -1,42 +1,37 @@
 #!/usr/bin/env bash
 #
-# helpers
+# pull
 
-usage() {
+pull_usage() {
   cat << EOF
-giti
+giti pull
 
 Usage:
-  giti.sh [-h|--help] [-v|--version]
-
-  giti.sh up|upgrade
+  giti.sh pl|pull [-h|--help]
 
 Options:
+  b|branch <branch name>
+          select branch
+
   -h|--help
           show this message
 
-  -v|--version
-          version
-
-  up|upgrade
-          upgrade giti.sh
+  r|remote <remote name>
+          select remote
 
 Examples:
   giti.sh -h
           display this message
 
-  giti.sh -v
-          display version
-
-  giti.sh upgrade
-          upgrade giti.sh to latest version
+  giti.sh pl r gh b feature/x
+          pull from specific remote and branch
 
 EOF
 }
 
-get_args() {
+pull_get_args() {
   if [[ -z $1 ]]; then
-    usage
+    pull_usage
     exit 0
   fi
 
@@ -46,21 +41,17 @@ get_args() {
     local key=$1
 
     case $key in
-      pl|pull)
-        pull_main "$@"
-        exit 0
+      b|branch)
+        BRANCH=$2
+        shift 2
         ;;
       -h|--help)
-        usage
+        pull_usage
         exit 0
         ;;
-      -v|--version)
-        printf '%s\n' "$VERSION"
-        exit 0
-        ;;
-      up|upgrade)
-        upgrade
-        exit 0
+      r|remote)
+        REMOTE=$2
+        shift 2
         ;;
       *)
         # get operator
@@ -73,4 +64,13 @@ get_args() {
     esac
   done
   set -- "${POSITIONAL[@]}"
+}
+
+pull_action() {
+  git pull "$REMOTE" "$BRANCH"
+}
+
+pull_main() {
+  pull_get_args "$@"
+  pull_action
 }

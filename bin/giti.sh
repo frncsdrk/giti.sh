@@ -26,6 +26,9 @@ readonly _src="${_rel}/src"
 
 source "${_src}/settings.sh"
 source "${_src}/helpers.sh"
+
+source "${_lib}/pull.sh"
+
 source "${_src}/main.sh"
 
 readonly VERSION="v0.0.0"
