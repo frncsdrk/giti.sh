@@ -27,6 +27,7 @@ readonly _src="${_rel}/src"
 source "${_src}/settings.sh"
 source "${_src}/helpers.sh"
 
+source "${_lib}/fetch.sh"
 source "${_lib}/pull.sh"
 source "${_lib}/push.sh"
 

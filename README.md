@@ -11,7 +11,7 @@ giti.sh
 
 Usage:
   giti.sh [-h|--help] [-v|--version]
-    pl|pull|ph|push
+    f|fetch|pl|pull|ph|push
 
   giti.sh up|upgrade
 
@@ -21,6 +21,9 @@ Options:
 
   -v|--version
           version
+
+  f|fetch
+          git fetch
 
   pl|pull
           git pull

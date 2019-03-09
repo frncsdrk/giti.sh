@@ -8,7 +8,7 @@ giti.sh
 
 Usage:
   giti.sh [-h|--help] [-v|--version]
-    pl|pull|ph|push
+    f|fetch|pl|pull|ph|push
 
   giti.sh up|upgrade
 
@@ -18,6 +18,9 @@ Options:
 
   -v|--version
           version
+
+  f|fetch
+          git fetch
 
   pl|pull
           git pull
@@ -60,6 +63,10 @@ get_args() {
       -v|--version)
         printf '%s\n' "$VERSION"
         exit 0
+        ;;
+      f|fetch)
+        fetch_main "$@"
+        shift
         ;;
       pl|pull)
         pull_main "$@"
