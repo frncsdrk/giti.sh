@@ -22,6 +22,8 @@ readonly _lib="${_rel}/lib"
 
 source "${_lib}/installer.sh"
 
+readonly _mods="${_rel}/modules"
+
 readonly _src="${_rel}/src"
 
 source "${_src}/settings.sh"
@@ -30,6 +32,8 @@ source "${_src}/helpers.sh"
 source "${_lib}/fetch.sh"
 source "${_lib}/pull.sh"
 source "${_lib}/push.sh"
+
+source "${_mods}/meh.sh"
 
 source "${_src}/main.sh"
 
