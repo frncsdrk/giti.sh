@@ -20,7 +20,7 @@ Options:
           select remote
 
 Examples:
-  giti.sh -h
+  giti.sh pl -h
           display this message
 
   giti.sh pl r gh b feature/x

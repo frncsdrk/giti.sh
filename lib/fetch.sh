@@ -17,7 +17,7 @@ Options:
           git fetch --all
 
 Examples:
-  giti.sh -h
+  giti.sh f -h
           display this message
 
   giti.sh f
