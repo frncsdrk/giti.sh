@@ -50,7 +50,7 @@ Examples:
 
 ### automatically
 
-Run `curl https://raw.githubusercontent.com/frncsdrk/giti.sh/master/download.sh | bash`
+Run `curl https://raw.githubusercontent.com/frncsdrk/giti.sh/master/download.sh | sudo bash`
 
 ### manually
 
@@ -60,6 +60,24 @@ Run `curl https://raw.githubusercontent.com/frncsdrk/giti.sh/master/download.sh 
 ## docker
 
 Use `docker run frncsdrk/giti.sh`
+
+## recommended git aliases
+
+- `gs` for `git status`
+
+## TODO
+
+### commands
+
+- [ ] rb - rebase
+- [ ] m - merge
+
+### modules
+
+- [ ] wip - `git add -A && git commit -m "WIP"`
+- [ ] meh - `git reset HEAD`
+- [ ] nah - `git reset HEAD --hard && git clean -df`
+- [ ] qm - quick merge
 
 ## license
 
