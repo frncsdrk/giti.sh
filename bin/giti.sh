@@ -42,7 +42,7 @@ source "${_mods}/wip.sh"
 
 source "${_src}/main.sh"
 
-readonly VERSION="v0.1.1"
+readonly VERSION="v0.2.0"
 
 main "${__script_params[@]}"
 
