@@ -29,6 +29,9 @@ Commands:
   ph|push
           git push
 
+  rb|rebase
+          git rebase
+
   up|upgrade
           upgrade giti.sh
 
@@ -90,6 +93,11 @@ get_args() {
       ph|push)
         shift
         push_main "$@"
+        exit 0
+        ;;
+      rb|rebase)
+        shift
+        rebase_main "$@"
         exit 0
         ;;
       meh)

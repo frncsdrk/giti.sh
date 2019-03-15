@@ -32,6 +32,9 @@ Commands:
   ph|push
           git push
 
+  rb|rebase
+          git rebase
+
   up|upgrade
           upgrade giti.sh
 
@@ -87,7 +90,7 @@ Use `docker run frncsdrk/giti.sh`
 
 ### commands
 
-- [ ] rb - rebase
+- [x] rb - rebase
 - [ ] m - merge
 
 ### modules
