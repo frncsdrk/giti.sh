@@ -39,6 +39,9 @@ Modules:
   meh
           git reset HEAD
 
+  nah
+        git reset HEAD --hard
+
 Examples:
   giti.sh -h
           display this message
@@ -81,7 +84,7 @@ Use `docker run frncsdrk/giti.sh`
 
 - [ ] wip - `git add -A && git commit -m "WIP"`
 - [x] meh - `git reset HEAD`
-- [ ] nah - `git reset HEAD --hard && git clean -df`
+- [x] nah - `git reset HEAD --hard && git clean -df`
 - [ ] qm - quick merge
 
 ## license

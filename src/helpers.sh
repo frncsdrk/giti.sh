@@ -36,6 +36,9 @@ Modules:
   meh
           git reset HEAD
 
+  nah
+          git reset HEAD --hard
+
 Examples:
   giti.sh -h
           display this message
@@ -83,6 +86,10 @@ get_args() {
         ;;
       meh)
         mod_meh_action "$@"
+        exit 0
+        ;;
+      nah)
+        mod_nah_action "$@"
         exit 0
         ;;
       up|upgrade)
