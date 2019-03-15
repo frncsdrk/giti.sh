@@ -89,17 +89,17 @@ mod_qmg_get_args() {
 mod_qmg_action() {
   mod_qmg_get_args "$@"
 
-  if [[ ! -z "$(TAG_NAME)" ]]; then
+  if [[ ! -z "$TAG_NAME" ]]; then
     if [[ $CREATE_TAG_COMMIT -gt 0 ]]; then
-      git commit -m "$(TAG_NAME)"
+      git commit -m "$TAG_NAME"
     fi
 
-    git tag "$(TAG_NAME)"
-    git push origin "$(TAG_NAME)"
+    git tag "$TAG_NAME"
+    git push origin "$TAG_NAME"
   fi
 
-  git checkout "$(DEST_BRANCH)"
-  git merge "$(SOURCE_BRANCH)" --commit --no-edit
-  git push origin "$(DEST_BRANCH)"
-  git checkout "$(SOURCE_BRANCH)"
+  git checkout "$DEST_BRANCH"
+  git merge "$SOURCE_BRANCH" --commit --no-edit
+  git push origin "$DEST_BRANCH"
+  git checkout "$SOURCE_BRANCH"
 }
