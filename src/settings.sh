@@ -3,7 +3,8 @@
 # settings
 
 INSTALLABLE_NAME="giti.sh"
-DOWNLOAD_URL="https://github.com/frncsdrk/giti.sh/archive/master.tar.gz"
+INSTALL_DIRECTORY_PATH="/opt"
+DOWNLOAD_URL="https://github.com/frncsdrk/${INSTALLABLE_NAME}/archive/master.tar.gz"
 EXTRACTED_DIR_NAME="${INSTALLABLE_NAME}-master"
 
 REMOTE="origin"
