@@ -42,6 +42,9 @@ Modules:
   nah
         git reset HEAD --hard
 
+  qmg
+        quick merge current branch into another branch with the option to add a tag beforehand
+
   wip
           git add -A && git commit -m "WIP"
 
@@ -58,6 +61,10 @@ Examples:
 ```
 
 ## installation
+
+### supported systems
+
+- linux
 
 ### automatically
 
@@ -85,10 +92,10 @@ Use `docker run frncsdrk/giti.sh`
 
 ### modules
 
-- [x] wip - `git add -A && git commit -m "WIP"`
 - [x] meh - `git reset HEAD`
 - [x] nah - `git reset HEAD --hard && git clean -df`
-- [ ] qm - quick merge
+- [ ] qmg - quick merge
+- [x] wip - `git add -A && git commit -m "WIP"`
 
 ## license
 

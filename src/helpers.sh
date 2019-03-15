@@ -39,6 +39,9 @@ Modules:
   nah
           git reset HEAD --hard
 
+  qmg
+          quick merge current branch into another branch with the option to add a tag beforehand
+
   wip
           git add -A && git commit -m "WIP"
 
@@ -93,6 +96,10 @@ get_args() {
         ;;
       nah)
         mod_nah_action "$@"
+        exit 0
+        ;;
+      qmg)
+        mod_qmg_action "$@"
         exit 0
         ;;
       wip)

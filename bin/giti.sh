@@ -35,6 +35,7 @@ source "${_lib}/push.sh"
 
 source "${_mods}/meh.sh"
 source "${_mods}/nah.sh"
+source "${_mods}/qmg.sh"
 source "${_mods}/wip.sh"
 
 source "${_src}/main.sh"
