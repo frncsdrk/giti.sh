@@ -26,6 +26,9 @@ Commands:
   f|fetch
           git fetch
 
+  m|merge
+          git merge
+
   pl|pull
           git pull
 
@@ -91,7 +94,7 @@ Use `docker run frncsdrk/giti.sh`
 ### commands
 
 - [x] rb - rebase
-- [ ] m - merge
+- [x] m - merge
 
 ### modules
 

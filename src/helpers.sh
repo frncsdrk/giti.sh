@@ -23,6 +23,9 @@ Commands:
   f|fetch
           git fetch
 
+  m|merge
+          git merge
+
   pl|pull
           git pull
 
@@ -84,6 +87,12 @@ get_args() {
       f|fetch)
         shift
         fetch_main "$@"
+        exit 0
+        ;;
+      m|merge)
+        shift
+        merge_main "$@"
+        exit 0
         ;;
       pl|pull)
         shift

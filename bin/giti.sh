@@ -30,6 +30,7 @@ source "${_src}/settings.sh"
 source "${_src}/helpers.sh"
 
 source "${_lib}/fetch.sh"
+source "${_lib}/merge.sh"
 source "${_lib}/pull.sh"
 source "${_lib}/push.sh"
 source "${_lib}/rebase.sh"
