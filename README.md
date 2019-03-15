@@ -22,6 +22,7 @@ Options:
   -v|--version
           version
 
+Commands:
   f|fetch
           git fetch
 
@@ -33,6 +34,10 @@ Options:
 
   up|upgrade
           upgrade giti.sh
+
+Modules:
+  meh
+          git reset HEAD
 
 Examples:
   giti.sh -h
@@ -75,7 +80,7 @@ Use `docker run frncsdrk/giti.sh`
 ### modules
 
 - [ ] wip - `git add -A && git commit -m "WIP"`
-- [ ] meh - `git reset HEAD`
+- [x] meh - `git reset HEAD`
 - [ ] nah - `git reset HEAD --hard && git clean -df`
 - [ ] qm - quick merge
 
