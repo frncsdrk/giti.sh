@@ -79,14 +79,16 @@ get_args() {
         exit 0
         ;;
       f|fetch)
-        fetch_main "$@"
         shift
+        fetch_main "$@"
         ;;
       pl|pull)
+        shift
         pull_main "$@"
         exit 0
         ;;
       ph|push)
+        shift
         push_main "$@"
         exit 0
         ;;

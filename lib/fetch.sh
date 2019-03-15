@@ -13,6 +13,9 @@ Options:
   -h|--help
           show this message
 
+  -a|--all
+          git fetch --all
+
 Examples:
   giti.sh -h
           display this message
@@ -20,7 +23,7 @@ Examples:
   giti.sh f
           git fetch
 
-  giti.sh fa
+  giti.sh f -a
           git fetch --all
 
 EOF
@@ -38,7 +41,7 @@ fetch_get_args() {
     local key=$1
 
     case $key in
-      a|all)
+      -a|--all)
         fetch_all_action "$@"
         exit 0
         ;;
@@ -60,7 +63,7 @@ fetch_get_args() {
 }
 
 fetch_action() {
-  git fetch
+  git fetch "$@"
 }
 
 fetch_all_action() {
@@ -69,5 +72,5 @@ fetch_all_action() {
 
 fetch_main() {
   fetch_get_args "$@"
-  fetch_action
+  fetch_action "$@"
 }

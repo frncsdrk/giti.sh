@@ -10,13 +10,13 @@ Usage:
   giti.sh pl|pull [-h|--help]
 
 Options:
-  b|branch <branch name>
+  -b|--branch <branch name>
           select branch
 
   -h|--help
           show this message
 
-  r|remote <remote name>
+  -r|--remote <remote name>
           select remote
 
 Examples:
@@ -41,7 +41,7 @@ pull_get_args() {
     local key=$1
 
     case $key in
-      b|branch)
+      -b|--branch)
         BRANCH=$2
         shift 2
         ;;
@@ -49,7 +49,7 @@ pull_get_args() {
         pull_usage
         exit 0
         ;;
-      r|remote)
+      -r|--remote)
         REMOTE=$2
         shift 2
         ;;
@@ -67,10 +67,10 @@ pull_get_args() {
 }
 
 pull_action() {
-  git pull "$REMOTE" "$BRANCH"
+  git pull "$REMOTE" "$BRANCH" "$@"
 }
 
 pull_main() {
   pull_get_args "$@"
-  pull_action
+  pull_action "$@"
 }

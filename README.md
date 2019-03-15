@@ -94,7 +94,7 @@ Use `docker run frncsdrk/giti.sh`
 
 - [x] meh - `git reset HEAD`
 - [x] nah - `git reset HEAD --hard && git clean -df`
-- [ ] qmg - quick merge
+- [x] qmg - quick merge
 - [x] wip - `git add -A && git commit -m "WIP"`
 
 ## license
