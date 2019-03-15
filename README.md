@@ -42,6 +42,9 @@ Modules:
   nah
         git reset HEAD --hard
 
+  wip
+          git add -A && git commit -m "WIP"
+
 Examples:
   giti.sh -h
           display this message
@@ -82,7 +85,7 @@ Use `docker run frncsdrk/giti.sh`
 
 ### modules
 
-- [ ] wip - `git add -A && git commit -m "WIP"`
+- [x] wip - `git add -A && git commit -m "WIP"`
 - [x] meh - `git reset HEAD`
 - [x] nah - `git reset HEAD --hard && git clean -df`
 - [ ] qm - quick merge

@@ -39,6 +39,9 @@ Modules:
   nah
           git reset HEAD --hard
 
+  wip
+          git add -A && git commit -m "WIP"
+
 Examples:
   giti.sh -h
           display this message
@@ -90,6 +93,10 @@ get_args() {
         ;;
       nah)
         mod_nah_action "$@"
+        exit 0
+        ;;
+      wip)
+        mod_wip_action "$@"
         exit 0
         ;;
       up|upgrade)
