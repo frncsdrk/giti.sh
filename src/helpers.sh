@@ -19,6 +19,7 @@ Options:
   -v|--version
           version
 
+Commands:
   f|fetch
           git fetch
 
@@ -30,6 +31,10 @@ Options:
 
   up|upgrade
           upgrade giti.sh
+
+Modules:
+  meh
+          git reset HEAD
 
 Examples:
   giti.sh -h
@@ -74,6 +79,10 @@ get_args() {
         ;;
       ph|push)
         push_main "$@"
+        exit 0
+        ;;
+      meh)
+        mod_meh_action "$@"
         exit 0
         ;;
       up|upgrade)
