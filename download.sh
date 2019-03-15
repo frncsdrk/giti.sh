@@ -7,7 +7,7 @@ INSTALL_DIRECTORY_PATH="/opt"
 source "./src/settings.sh"
 
 download() {
-  if [[ ! -d /tmp ]]; then
+  if [[ ! -d /tmp ]] ; then
     mkdir /tmp
   fi
 
