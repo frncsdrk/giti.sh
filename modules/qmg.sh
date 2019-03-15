@@ -91,6 +91,7 @@ mod_qmg_action() {
 
   if [[ ! -z "$TAG_NAME" ]]; then
     if [[ $CREATE_TAG_COMMIT -gt 0 ]]; then
+      git add -A
       git commit -m "$TAG_NAME"
     fi
 
