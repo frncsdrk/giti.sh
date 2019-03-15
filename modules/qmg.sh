@@ -93,14 +93,15 @@ mod_qmg_action() {
     if [[ $CREATE_TAG_COMMIT -gt 0 ]]; then
       git add -A
       git commit -m "$TAG_NAME"
+      git push "$REMOTE" "$SOURCE_BRANCH"
     fi
 
     git tag "$TAG_NAME"
-    git push origin "$TAG_NAME"
+    git push "$REMOTE" "$TAG_NAME"
   fi
 
   git checkout "$DEST_BRANCH"
   git merge "$SOURCE_BRANCH" --commit --no-edit
-  git push origin "$DEST_BRANCH"
+  git push "$REMOTE" "$DEST_BRANCH"
   git checkout "$SOURCE_BRANCH"
 }
