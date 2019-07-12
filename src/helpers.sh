@@ -23,11 +23,17 @@ Commands:
   f|fetch
           git fetch
 
+  m|merge
+          git merge
+
   pl|pull
           git pull
 
   ph|push
           git push
+
+  rb|rebase
+          git rebase
 
   up|upgrade
           upgrade giti.sh
@@ -35,6 +41,15 @@ Commands:
 Modules:
   meh
           git reset HEAD
+
+  nah
+          git reset HEAD --hard
+
+  qmg
+          quick merge current branch into another branch with the option to add a tag beforehand
+
+  wip
+          git add -A && git commit -m "WIP"
 
 Examples:
   giti.sh -h
@@ -70,19 +85,44 @@ get_args() {
         exit 0
         ;;
       f|fetch)
-        fetch_main "$@"
         shift
+        fetch_main "$@"
+        exit 0
+        ;;
+      m|merge)
+        shift
+        merge_main "$@"
+        exit 0
         ;;
       pl|pull)
+        shift
         pull_main "$@"
         exit 0
         ;;
       ph|push)
+        shift
         push_main "$@"
+        exit 0
+        ;;
+      rb|rebase)
+        shift
+        rebase_main "$@"
         exit 0
         ;;
       meh)
         mod_meh_action "$@"
+        exit 0
+        ;;
+      nah)
+        mod_nah_action "$@"
+        exit 0
+        ;;
+      qmg)
+        mod_qmg_action "$@"
+        exit 0
+        ;;
+      wip)
+        mod_wip_action "$@"
         exit 0
         ;;
       up|upgrade)

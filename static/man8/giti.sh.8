@@ -1,6 +1,6 @@
 .\" Manpage for giti.sh
 .\" Contact frncsdrk@protonmail.com
-.TH man 8 "12.03.2019" "0.0.0" "giti.sh man page"
+.TH man 8 "15.03.2019" "0.2.2" "giti.sh man page"
 .SH NAME
 supa.sh \- bash tool to update debian-based linux machines, also means soup in Greek.
 .SH SYNOPSIS
@@ -21,11 +21,17 @@ a git toolbelt
 f|fetch
         git fetch
 
+m|merge
+        git merge
+
 pl|pull
         git pull
 
 ph|push
         git push
+
+rb|rebase
+        git rebase
 
 up|upgrade
         upgrade giti.sh
@@ -33,6 +39,15 @@ up|upgrade
 .SH MODULES
 meh
         git reset HEAD
+
+nah
+        git reset HEAD --hard
+
+qmg
+        quick merge current branch into another branch with the option to add a tag beforehand
+
+wip
+        git add -A && git commit -m "WIP"
 
 .SH EXAMPLES
 giti.sh -v

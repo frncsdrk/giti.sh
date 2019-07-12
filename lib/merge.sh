@@ -1,37 +1,31 @@
 #!/usr/bin/env bash
 #
-# fetch
+# merge
 
-fetch_usage() {
+merge_usage() {
   cat << EOF
-giti.sh fetch
+giti.sh merge
 
 Usage:
-  giti.sh f|fetch [a|all] [-h|--help]
+  giti.sh m|merge [-h|--help]
 
 Options:
   -h|--help
           show this message
 
-  -a|--all
-          git fetch --all
-
 Examples:
-  giti.sh f -h
+  giti.sh m -h
           display this message
 
-  giti.sh f
-          git fetch
-
-  giti.sh f -a
-          git fetch --all
+  giti.sh m
+          git merge
 
 EOF
 }
 
-fetch_get_args() {
+merge_get_args() {
   if [[ -z $1 ]]; then
-    fetch_usage
+    merge_usage
     exit 0
   fi
 
@@ -41,12 +35,8 @@ fetch_get_args() {
     local key=$1
 
     case $key in
-      -a|--all)
-        fetch_all_action "$@"
-        exit 0
-        ;;
       -h|--help)
-        fetch_usage
+        merge_usage
         exit 0
         ;;
       *)
@@ -62,15 +52,11 @@ fetch_get_args() {
   set -- "${POSITIONAL[@]}"
 }
 
-fetch_action() {
-  git fetch "$@"
+merge_action() {
+  git merge "$@"
 }
 
-fetch_all_action() {
-  git fetch --all
-}
-
-fetch_main() {
-  fetch_get_args "$@"
-  fetch_action "$@"
+merge_main() {
+  merge_get_args "$@"
+  merge_action "$@"
 }

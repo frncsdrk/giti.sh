@@ -22,8 +22,12 @@ Options:
   -v|--version
           version
 
+Commands:
   f|fetch
           git fetch
+
+  m|merge
+          git merge
 
   pl|pull
           git pull
@@ -31,8 +35,24 @@ Options:
   ph|push
           git push
 
+  rb|rebase
+          git rebase
+
   up|upgrade
           upgrade giti.sh
+
+Modules:
+  meh
+          git reset HEAD
+
+  nah
+        git reset HEAD --hard
+
+  qmg
+        quick merge current branch into another branch with the option to add a tag beforehand
+
+  wip
+          git add -A && git commit -m "WIP"
 
 Examples:
   giti.sh -h
@@ -47,6 +67,10 @@ Examples:
 ```
 
 ## installation
+
+### supported systems
+
+- linux
 
 ### automatically
 
@@ -69,15 +93,15 @@ Use `docker run frncsdrk/giti.sh`
 
 ### commands
 
-- [ ] rb - rebase
-- [ ] m - merge
+- [x] rb - rebase
+- [x] m - merge
 
 ### modules
 
-- [ ] wip - `git add -A && git commit -m "WIP"`
-- [ ] meh - `git reset HEAD`
-- [ ] nah - `git reset HEAD --hard && git clean -df`
-- [ ] qm - quick merge
+- [x] meh - `git reset HEAD`
+- [x] nah - `git reset HEAD --hard && git clean -df`
+- [x] qmg - quick merge
+- [x] wip - `git add -A && git commit -m "WIP"`
 
 ## license
 

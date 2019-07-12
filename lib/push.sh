@@ -10,17 +10,17 @@ Usage:
   giti.sh ph|push [-h|--help]
 
 Options:
-  b|branch <branch name>
+  -b|--branch <branch name>
           select branch
 
   -h|--help
           show this message
 
-  r|remote <remote name>
+  -r|--remote <remote name>
           select remote
 
 Examples:
-  giti.sh -h
+  giti.sh ph -h
           display this message
 
   giti.sh ph r gh b feature/x
@@ -41,7 +41,7 @@ push_get_args() {
     local key=$1
 
     case $key in
-      b|branch)
+      -b|--branch)
         BRANCH=$2
         shift 2
         ;;
@@ -49,7 +49,7 @@ push_get_args() {
         push_usage
         exit 0
         ;;
-      r|remote)
+      -r|--remote)
         REMOTE=$2
         shift 2
         ;;
@@ -67,10 +67,10 @@ push_get_args() {
 }
 
 push_action() {
-  git push "$REMOTE" "$BRANCH"
+  git push "$REMOTE" "$BRANCH" "$@"
 }
 
 push_main() {
   push_get_args "$@"
-  push_action
+  push_action "$@"
 }

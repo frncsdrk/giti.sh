@@ -30,14 +30,21 @@ source "${_src}/settings.sh"
 source "${_src}/helpers.sh"
 
 source "${_lib}/fetch.sh"
+source "${_lib}/merge.sh"
 source "${_lib}/pull.sh"
 source "${_lib}/push.sh"
+source "${_lib}/rebase.sh"
+
+source "${_mods}/meh.sh"
+source "${_mods}/nah.sh"
+source "${_mods}/qmg.sh"
+source "${_mods}/wip.sh"
 
 source "${_mods}/meh.sh"
 
 source "${_src}/main.sh"
 
-readonly VERSION="v0.0.0"
+readonly VERSION="v0.2.2"
 
 main "${__script_params[@]}"
 
