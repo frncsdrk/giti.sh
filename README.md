@@ -105,4 +105,4 @@ Use `docker run frncsdrk/giti.sh`
 
 ## license
 
-[MIT](https://github.com/frncsdrk/giti.sh/blob/master/LICENSE) (c) frncsdrk 2019
+[MIT](https://github.com/frncsdrk/giti.sh/blob/master/LICENSE) (c) 2019 frncsdrk
